@@ -3,6 +3,7 @@
 	<persistence-unit name="EmaProject" transaction-type="RESOURCE_LOCAL">
 		<non-jta-data-source>java:/MyProject</non-jta-data-source>
 		<class>com.klef.ep.models.Employee</class>
+		<class>com.klef.ep.models.Offers</class>
 		<properties> 
 		 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
 		 <property name="hibernate.hbm2ddl.auto" value="update" />

@@ -1,0 +1,7 @@
+package com.klef.ep.services;
+
+import com.klef.ep.models.Employee;
+
+public interface EmployeeServices {
+	public String addEmployee(Employee emp);
+}

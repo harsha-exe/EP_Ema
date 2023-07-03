@@ -1,0 +1,8 @@
+package com.klef.ep.controllers;
+
+import javax.ws.rs.POST;
+
+public class OffersServiceController {
+@POST
+
+}

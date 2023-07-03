@@ -1,0 +1,62 @@
+package com.klef.ep.services;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.klef.ep.models.Offers;
+
+@Stateless
+@TransactionManagement(TransactionManagementType.BEAN)
+public class OffersServicesImpl implements OffersServices {
+
+	@Override
+	public String addOffers(Offers o) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("EmaProject");
+		EntityManager em=emf.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(o);
+		em.getTransaction().commit();
+		em.close();
+		emf.close();
+		return "Inserted Offer Successfully";
+	}
+
+	@Override
+	public String updateOffers(Offers o) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("EmaProject");
+		EntityManager em=emf.createEntityManager();
+		em.getTransaction().begin();
+		O
+		return null;
+	}
+
+	@Override
+	public String deleteOffers(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Offers> viewAllOffers() {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("EmaProject");
+		EntityManager em=emf.createEntityManager();
+		em.getTransaction().begin();
+		Query qry=em.createQuery("select o from Offers o");
+		List<Offers> al=qry.getResultList();
+		return al;
+	}
+
+	@Override
+	public Offers viewOffersById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

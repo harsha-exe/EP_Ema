@@ -1,0 +1,9 @@
+package com.klef.ep.controllers;
+
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+public class OffersServiceController {
+@POST
+@Path("addoffer")
+}

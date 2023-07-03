@@ -1,0 +1,37 @@
+package com.klef.ep.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="employee_table")
+public class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private int id;
+	@Column(name = "euser",length = 50,nullable = false,unique = true)
+	private String username;
+	@Column(name="efname",length=50,nullable=false)
+	private String firstname;
+	@Column(name="elname",length=50,nullable=false)
+	private String lastname;
+	@Column(name="eemail",length=50,nullable=false)
+	private String email;
+	@Column(name="egender",length=10,nullable=false)
+	private String gender;
+	@Column(name="edob",length=15,nullable=false)
+	private String dob;
+	@Column(name="eage",length=nullable=false)
+	private int age;
+	
+	
+	
+}
